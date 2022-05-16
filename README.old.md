@@ -1,1 +1,0 @@
-# mv-covid-stats
