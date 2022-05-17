@@ -6,7 +6,7 @@ const CountryData = (props) => {
   return (
     <li>
       <h2>{country.name}</h2>
-      <h3>{country.totalCases}</h3>
+      <p>{country.totalCases}</p>
     </li>
   );
 };
