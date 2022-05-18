@@ -1,16 +1,9 @@
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { currentDate } from '../api/api';
-import { getAggregatedData } from '../redux/aggregate/aggregate';
 
 const AggregatedData = () => {
   const total = useSelector((state) => state.aggregate);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getAggregatedData());
-  }, []);
 
   return (
     <>
