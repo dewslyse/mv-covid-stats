@@ -10,7 +10,7 @@ const Filter = () => {
   };
 
   return (
-    <div>
+    <div className="filter">
       <input
         id="submit"
         placeholder="Filter by country"

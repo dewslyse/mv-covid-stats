@@ -67,7 +67,7 @@ body {
 // Hero / Aggregate Section
 .hero {
   border: 1px solid red;
-  padding: 30px 12px;
+  padding: 20px 12px;
   display: flex;
   align-items: center;
 }
@@ -110,6 +110,18 @@ body {
 
   span {
     font-weight: bold;
-    // float: right;
+  }
+}
+
+// Filter
+.filter {
+  margin: 0 auto;
+  width: 75%;
+
+  input {
+    width: 100%;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid green;
   }
 }
