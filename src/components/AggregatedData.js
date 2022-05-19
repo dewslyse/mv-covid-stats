@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { currentDate } from '../api/api';
 
@@ -26,20 +25,6 @@ const AggregatedData = () => {
       </div>
     </>
   );
-};
-
-AggregatedData.defaultProps = {
-  total: {},
-};
-
-AggregatedData.propTypes = {
-  total: PropTypes.shape(
-    {
-      name: PropTypes.string,
-      aggregatedCases: PropTypes.number,
-      aggregatedDeaths: PropTypes.number,
-    },
-  ),
 };
 
 export default AggregatedData;
