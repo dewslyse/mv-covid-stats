@@ -1,6 +1,6 @@
 import fetchCovidData from '../../api/api';
 
-const AGGREGATED_DATA = 'mv-covid-stats/country/AGGREGATED_DATA';
+const AGGREGATED_DATA = 'mv-covid-stats/aggregate/AGGREGATED_DATA';
 
 export const getAggregatedData = () => async (dispatch) => {
   const aggregatedData = await fetchCovidData();
