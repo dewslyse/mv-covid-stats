@@ -1,12 +1,20 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const CountryData = (props) => {
   const { country } = props;
 
+  // const imgURL = `https://countryflagsapi.com/png/${country.name}`;
+
   return (
     <li>
-      <h2>{country.name}</h2>
-      <p>{country.totalCases}</p>
+      <Link
+        to={`/country/${country.name}`}
+      >
+        {/* <img src={imgURL} alt="" /> */}
+        <h2>{country.name}</h2>
+        <p>{country.totalCases}</p>
+      </Link>
     </li>
   );
 };
