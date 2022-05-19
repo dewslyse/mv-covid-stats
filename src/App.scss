@@ -22,6 +22,7 @@ body {
   margin: 0 auto;
 }
 
+// Nav Section
 .header {
   border: 1px solid red;
   display: flex;
@@ -61,4 +62,54 @@ body {
 .cog,
 .year {
   margin-left: 24px;
+}
+
+// Hero / Aggregate Section
+.hero {
+  border: 1px solid red;
+  padding: 30px 12px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  align-items: center;
+}
+
+.map {
+  margin-right: -30px;
+  // width: 100%;
+  justify-content: end;
+  justify-self: right;
+  justify-items: right;
+
+  img {
+    border: 1px solid green;
+    width: 75%;
+  }
+}
+
+.aggregates {
+  border: 1px solid green;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    padding: 7px 0;
+    font-family: $Lato;
+  }
+
+  h3 {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  span {
+    font-weight: bold;
+    // float: right;
+  }
 }
