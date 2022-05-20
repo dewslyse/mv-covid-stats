@@ -20,7 +20,6 @@ export const getCountryData = () => async (dispatch) => {
 const detailReducer = (state = [], action) => {
   switch (action.type) {
     case FETCHED_DETAIL:
-      console.log(action.payload);
       return action.payload;
 
     default:

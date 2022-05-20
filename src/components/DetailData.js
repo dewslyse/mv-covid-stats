@@ -5,7 +5,6 @@ import { getCountryData } from '../redux/detail/detail';
 
 const DetailData = () => {
   const detail = useSelector((state) => state.detail);
-  console.log(detail);
   const dispatch = useDispatch();
 
   useEffect(() => {
