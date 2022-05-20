@@ -5,9 +5,7 @@ import Filter from '../components/Filter';
 const Homepage = () => (
   <main>
     <AggregatedData />
-    <br />
     <Filter />
-    <br />
     <Countries />
   </main>
 );
