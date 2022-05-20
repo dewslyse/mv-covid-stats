@@ -4,9 +4,11 @@ import Filter from '../components/Filter';
 
 const Homepage = () => (
   <main>
-    <AggregatedData />
-    <Filter />
-    <Countries />
+    <div className="container">
+      <AggregatedData />
+      <Filter />
+      <Countries />
+    </div>
   </main>
 );
 
