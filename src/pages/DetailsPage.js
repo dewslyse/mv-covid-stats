@@ -2,7 +2,9 @@ import DetailData from '../components/DetailData';
 
 const DetailsPage = () => (
   <main>
-    <DetailData />
+    <div className="container">
+      <DetailData />
+    </div>
   </main>
 );
 

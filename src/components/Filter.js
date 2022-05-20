@@ -10,10 +10,11 @@ const Filter = () => {
   };
 
   return (
-    <div>
+    <div className="filter">
+      <p>Stats by Country</p>
       <input
         id="submit"
-        placeholder="Filter by country"
+        placeholder="Search..."
         onChange={handleInput}
       />
     </div>

@@ -22,7 +22,7 @@ const Countries = () => {
   }, [filter]);
 
   return (
-    <ul>
+    <div className="countries-container">
       {filterList.length === 0
         && (countries.map((country) => (
           <CountryData key={country.id} country={country} />
@@ -32,7 +32,7 @@ const Countries = () => {
         && (filterList.map((country) => (
           <CountryData key={country.id} country={country} />
         )))}
-    </ul>
+    </div>
   );
 };
 

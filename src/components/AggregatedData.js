@@ -5,25 +5,26 @@ const AggregatedData = () => {
   const total = useSelector((state) => state.aggregate);
 
   return (
-    <>
-      <div>
-        Last Updated:
-        {' '}
-        {currentDate}
-      </div>
-      <div>
-        <h3>
-          <span>Total cases:</span>
+    <section className="hero">
+      <div className="aggregates">
+        <h2>World Covid-19 stats</h2>
+        <p>
+          Last Updated:
           {' '}
-          {total.today_confirmed}
+          {currentDate}
+        </p>
+        <h3>
+          Total cases:
+          {' '}
+          <span>{total.today_confirmed}</span>
         </h3>
         <h3>
-          <span>Total deaths:</span>
+          Total deaths:
           {' '}
-          {total.today_deaths}
+          <span>{total.today_deaths}</span>
         </h3>
       </div>
-    </>
+    </section>
   );
 };
 

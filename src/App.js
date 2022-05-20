@@ -5,6 +5,8 @@ import DetailsPage from './pages/DetailsPage';
 import Homepage from './pages/Homepage';
 import { getAggregatedData } from './redux/aggregate/aggregate';
 import { getCovidData } from './redux/country/country';
+import './App.scss';
+import Nav from './components/Nav';
 
 function App() {
   const dispatch = useDispatch();
@@ -15,6 +17,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/country/:countryName" element={<DetailsPage />} />
