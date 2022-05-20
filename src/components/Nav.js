@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <header className="header">
       <div className="back">
-        <Link to="/" className="back-btn">
+        <Link to="/" className="back-btn" onClick="window.location.reload()">
           <IoIosArrowBack
             className="chevron-left"
           />

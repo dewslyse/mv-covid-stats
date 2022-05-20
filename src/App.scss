@@ -19,12 +19,6 @@ body {
   box-sizing: border-box;
 }
 
-.container {
-  max-width: 375px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 // Nav Section
 .header {
   width: 100%;
@@ -37,6 +31,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 10;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 .back {
@@ -73,14 +68,16 @@ body {
 }
 
 // Hero & Aggregate Section
-.hero {
+.hero,
+.details-hero {
   margin-top: 50px;
   background-color: $light-blue;
   padding: 20px 12px;
   display: flex;
 }
 
-.aggregates {
+.aggregates,
+.details-aggregate {
   width: 100%;
   padding: 30px 0;
   margin: 0 auto;
@@ -188,5 +185,69 @@ body {
   &:nth-child(4n+2),
   &:nth-child(4n+3) {
     background-color: $blue;
+  }
+}
+
+// Details Page
+.details-hero {
+  text-align: right;
+}
+
+.details-aggregate {
+  background-position: center left 0;
+  position: relative;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  img {
+    position: absolute;
+    width: 40px;
+    right: 5px;
+    top: 0;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 1px 4px 8px rgba($color: #000, $alpha: 0.3);
+  }
+}
+
+.details-caption {
+  background-color: $blue;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 16px;
+  color: $white;
+
+  h3 {
+    font-weight: bold;
+  }
+}
+
+.stat {
+  list-style: none;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  font-size: 1.375rem;
+  border: 1px solid $light-blue;
+  border-radius: 5px;
+  margin-bottom: 8px;
+
+  &:nth-of-type(even) {
+    background-color: $blue;
+  }
+}
+
+@media (min-width: 1140px) {
+  .container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .countries-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
