@@ -1,14 +1,22 @@
 import { IoIosArrowBack, IoIosSettings } from 'react-icons/io';
 import { HiOutlineMicrophone } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { eraseFilter } from '../redux/filter/filter';
 
 const Nav = () => {
+  const dispatch = useDispatch();
+
   const currentYear = new Date().getFullYear();
+
+  const click = () => {
+    dispatch(eraseFilter());
+  };
 
   return (
     <header className="header">
       <div className="back">
-        <Link to="/" className="back-btn" onClick="window.location.reload()">
+        <Link to="/" className="back-btn" onClick={click}>
           <IoIosArrowBack
             className="chevron-left"
           />
