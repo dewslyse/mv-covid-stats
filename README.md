@@ -16,7 +16,7 @@
 - Redux
 - CSS/SCSS
 - ~~[Narrativa API](https://covid19tracking.narrativa.com/index_en.html)~~
-- [disease.sh](https://disease.sh/)
+- [disease.sh Covid-19 API](https://disease.sh/)
 
 
 ## Live site 🚀
