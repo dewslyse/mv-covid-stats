@@ -15,7 +15,8 @@
 - ReactJS
 - Redux
 - CSS/SCSS
-- [Narrativa API](https://covid19tracking.narrativa.com/index_en.html)
+- ~~[Narrativa API](https://covid19tracking.narrativa.com/index_en.html)~~
+- [disease.sh](https://disease.sh/)
 
 
 ## Live site 🚀
@@ -68,7 +69,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Covid-19 Data provided by [Narrativa technology](https://covid19tracking.narrativa.com/index_en.html)
+- Covid-19 Data provided by [disease.sh](https://disease.sh/)
 
 - Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 
