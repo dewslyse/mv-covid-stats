@@ -31,7 +31,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .back {
@@ -44,27 +44,25 @@ body {
   background-color: transparent;
 }
 
-.year {
-  font-family: $Lato;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
 .app-caption {
-  font-size: 1.55rem;
+  font-size: 1.4rem;
 }
 
 .microphone,
-.cog,
+.cog {
+  width: 22px;
+  height: 22px;
+  color: $white;
+}
+
 .chevron-left {
   width: 24px;
   height: 24px;
   color: $white;
 }
 
-.cog,
-.year {
-  margin-left: 24px;
+.cog {
+  margin-left: 12px;
 }
 
 // Hero & Aggregate Section
@@ -89,10 +87,11 @@ body {
 
   h2 {
     font-size: 1.5rem;
+    margin-bottom: 10px;
   }
 
   p {
-    padding: 12px 0;
+    padding: 20px 0 0;
     color: $white;
   }
 
@@ -141,6 +140,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: 5px;
+  padding: 0 5px;
 }
 
 .country-box {
@@ -216,12 +216,22 @@ body {
   background-color: $blue;
   display: flex;
   justify-content: space-between;
-  padding: 10px 16px;
+  align-items: center;
+  padding: 10px 15px;
   color: $white;
 
   h3 {
     font-weight: bold;
   }
+
+  span {
+    font-size: 13px;
+  }
+}
+
+.details-stats {
+  border-top: 1px solid $light-blue;
+  padding: 10px 5px;
 }
 
 .stat {
@@ -249,5 +259,10 @@ body {
 
   .countries-container {
     grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
+
+  .details-stats {
+    padding: 10px 0;
   }
 }
