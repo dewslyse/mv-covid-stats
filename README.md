@@ -15,7 +15,7 @@
 - ReactJS
 - Redux
 - CSS/SCSS
-- ~~[Narrativa API](https://covid19tracking.narrativa.com/index_en.html)~~
+- ~~[Narrativa API](https://www.narrativa.com/narrativa-covid-19-tracking-project-will-no-longer-be-available/)~~
 - [disease.sh Covid-19 API](https://disease.sh/)
 
 
