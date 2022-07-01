@@ -7,8 +7,6 @@ import { eraseFilter } from '../redux/filter/filter';
 const Nav = () => {
   const dispatch = useDispatch();
 
-  const currentYear = new Date().getFullYear();
-
   const click = () => {
     dispatch(eraseFilter());
   };
@@ -21,7 +19,6 @@ const Nav = () => {
             className="chevron-left"
           />
         </Link>
-        <span className="year">{currentYear}</span>
       </div>
       <h1 className="app-caption">Covid Tracker</h1>
       <div>

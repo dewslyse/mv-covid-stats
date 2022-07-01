@@ -20,7 +20,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/country/:countryName" element={<DetailsPage />} />
+        <Route path="/countries/:countryName" element={<DetailsPage />} />
       </Routes>
     </BrowserRouter>
   );

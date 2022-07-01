@@ -1,9 +1,9 @@
-const covidURL = 'https://api.covid19tracking.narrativa.com/api';
-const d = new Date();
-d.setDate(d.getDate() - 1);
-export const currentDate = d.toISOString().slice(0, 10);
+const covidURL = 'https://disease.sh/v3/covid-19/';
 
-const fetchCovidData = () => fetch(`${covidURL}/${currentDate}`)
+const fetchCovidData = () => fetch(`${covidURL}countries`)
   .then((response) => response.json());
 
-export default fetchCovidData;
+const fetchAggregatedData = () => fetch(`${covidURL}all`)
+  .then((response) => response.json());
+
+export { fetchCovidData, fetchAggregatedData };

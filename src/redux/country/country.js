@@ -1,4 +1,4 @@
-import fetchCovidData, { currentDate } from '../../api/api';
+import { fetchCovidData } from '../../api/api';
 
 const FETCHED_COUNTRIES = 'mv-covid-stats/country/FETCHED_COUNTRIES';
 
@@ -7,18 +7,15 @@ const initialState = [];
 // Action Creators
 export const getCovidData = () => async (dispatch) => {
   const allData = await fetchCovidData()
-    .then((json) => {
-      const { countries } = json.dates[currentDate];
-
-      return Object.keys(countries).map((key, index) => (
-        {
-          id: index,
-          name: countries[key].name,
-          totalCases: countries[key].today_confirmed,
-          totalDeaths: countries[key].today_deaths,
-        }
-      ));
-    });
+    .then((json) => json.map((country, index) => (
+      {
+        id: index,
+        name: country.country,
+        totalCases: country.cases,
+        totalDeaths: country.deaths,
+        flag: country.countryInfo.flag,
+      }
+    )));
 
   dispatch({
     type: FETCHED_COUNTRIES,

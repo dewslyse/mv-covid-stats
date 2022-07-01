@@ -1,14 +1,14 @@
-import { currentDate } from '../../api/api';
+// import { currentDate } from '../../api/api';
 
 const FETCHED_DETAIL = 'mv-covid-stats/detail/FETCHED_DETAIL';
 
 // Action Creators
 export const getCountryData = () => async (dispatch) => {
-  const baseURL = 'https://api.covid19tracking.narrativa.com/api';
+  const baseURL = 'https://disease.sh/v3/covid-19';
 
-  const response = await fetch(`${baseURL}/${currentDate}${window.location.pathname}`);
+  const response = await fetch(`${baseURL}${window.location.pathname}`);
   const responseData = await response.json();
-  const countryData = Object.entries(responseData.dates[currentDate].countries)[0][1];
+  const countryData = responseData;
 
   dispatch({
     type: FETCHED_DETAIL,
