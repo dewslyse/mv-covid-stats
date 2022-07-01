@@ -6,14 +6,12 @@ import { BsArrowRightCircle } from 'react-icons/bs';
 const CountryData = (props) => {
   const { country } = props;
 
-  const imgURL = `https://countryflagsapi.com/png/${country.name}`;
-
   return (
     <Link
-      to={`/country/${country.name}`}
+      to={`countries/${country.name}`}
       className="country-box"
     >
-      <img src={imgURL} alt="" />
+      <img src={country.flag} alt="" />
 
       <BsArrowRightCircle />
       <div>
@@ -37,6 +35,7 @@ CountryData.propTypes = {
     {
       name: PropTypes.string,
       totalCases: PropTypes.number,
+      flag: PropTypes.string,
     },
   ),
 };

@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { currentDate } from '../api/api';
 import { getCountryData } from '../redux/detail/detail';
 
 const DetailData = () => {
@@ -11,18 +10,19 @@ const DetailData = () => {
     dispatch(getCountryData());
   }, []);
 
-  const imgURL = `https://countryflagsapi.com/png/${detail.name}`;
+  const imgURL = `https://countryflagsapi.com/png/${detail.country}`;
+  const currentDate = Date(`${detail.updated}`).slice(4, 15);
 
   return (
     <section>
       <section className="details-hero">
         <div className="details-aggregate">
           <img src={imgURL} alt="" />
-          <h2>{detail.name}</h2>
+          <h2>{detail.country}</h2>
           <p>
             Total cases:
             {' '}
-            <span>{detail.today_confirmed}</span>
+            <span>{detail.cases}</span>
           </p>
         </div>
       </section>
@@ -40,25 +40,25 @@ const DetailData = () => {
           <li className="stat">
             <p className="stat-caption">New cases:</p>
             <p className="stat-value">
-              {detail.today_new_confirmed}
+              {detail.todayCases}
+            </p>
+          </li>
+          <li className="stat">
+            <p className="stat-caption">Active cases:</p>
+            <p className="stat-value">
+              {detail.active}
             </p>
           </li>
           <li className="stat">
             <p className="stat-caption">Total deaths:</p>
             <p className="stat-value">
-              {detail.today_deaths}
+              {detail.deaths}
             </p>
           </li>
           <li className="stat">
             <p className="stat-caption">Total recoveries:</p>
             <p className="stat-value">
-              {detail.today_recovered}
-            </p>
-          </li>
-          <li className="stat">
-            <p className="stat-caption">Open cases:</p>
-            <p className="stat-value">
-              {detail.today_open_cases}
+              {detail.recovered}
             </p>
           </li>
         </ul>
