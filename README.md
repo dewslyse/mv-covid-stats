@@ -21,7 +21,7 @@
 
 ## Live site 🚀
 
-🔗 ~~[Heroku](https://mv-covid-stats.herokuapp.com/)~~
+🔗 [Heroku](https://mv-covid-stats.herokuapp.com/)
 
 🔗 [Netlify](https://covid-dewslyse.netlify.app/)
 
